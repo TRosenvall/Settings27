@@ -8,13 +8,13 @@
 
 import UIKit
 
-class setting {
+class Setting {
     
-    let icon: UIImage
+    let icon: UIImage?
     let name: String
     var isOn: Bool
     
-    init( icon: UIImage, name: String, isOn: Bool ) {
+    init( icon: UIImage?, name: String, isOn: Bool ) {
         self.icon = icon
         self.name = name
         self.isOn = isOn
