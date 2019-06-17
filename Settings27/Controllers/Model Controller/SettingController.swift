@@ -6,4 +6,10 @@
 //  Copyright © 2019 Timothy Rosenvall. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class SettingController {
+    
+    
+    
+}

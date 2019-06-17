@@ -6,4 +6,17 @@
 //  Copyright © 2019 Timothy Rosenvall. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class setting {
+    
+    let icon: UIImage
+    let name: String
+    var isOn: Bool
+    
+    init( icon: UIImage, name: String, isOn: Bool ) {
+        self.icon = icon
+        self.name = name
+        self.isOn = isOn
+    }
+}
