@@ -8,13 +8,19 @@
 
 import UIKit
 
-class SettingTableViewCell: UITableViewCell {
+// Define the Protocol
+protocol SettingCellDelegate: class {
+    func settingSwitchTapped(for cell: SettingTableViewCell)
+}
 
+class SettingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var settingSwitch: UISwitch!
     
+    // Define the delegate
+    weak var cellDelegate: SettingCellDelegate?
     
     func updateViews(with setting: Setting) {
         icon.image = setting.icon
@@ -30,4 +36,11 @@ class SettingTableViewCell: UITableViewCell {
         //Ternery Operator
         self.backgroundColor = settingSwitch.isOn ? .cyan : .white
     }
+    
+    @IBAction func settingCellToggled(_ sender: Any) {
+        cellDelegate?.settingSwitchTapped(for: self)
+    }
+    
+    
+    
 }
