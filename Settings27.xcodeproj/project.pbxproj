@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		851F019D22B7F46700B32D2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F019C22B7F46700B32D2A /* AppDelegate.swift */; };
-		851F019F22B7F46700B32D2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F019E22B7F46700B32D2A /* ViewController.swift */; };
 		851F01A222B7F46700B32D2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851F01A022B7F46700B32D2A /* Main.storyboard */; };
 		851F01A422B7F46800B32D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851F01A322B7F46800B32D2A /* Assets.xcassets */; };
 		851F01A722B7F46800B32D2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851F01A522B7F46800B32D2A /* LaunchScreen.storyboard */; };
+		851F01B122B7FBFF00B32D2A /* SettingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F01B022B7FBFF00B32D2A /* SettingListTableViewController.swift */; };
+		851F01B422B7FC3200B32D2A /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F01B322B7FC3200B32D2A /* SettingTableViewCell.swift */; };
+		851F01B722B7FC6300B32D2A /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F01B622B7FC6300B32D2A /* Setting.swift */; };
+		851F01BA22B7FC7700B32D2A /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F01B922B7FC7700B32D2A /* SettingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		851F019922B7F46700B32D2A /* Settings27.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Settings27.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		851F019C22B7F46700B32D2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		851F019E22B7F46700B32D2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		851F01A122B7F46700B32D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		851F01A322B7F46800B32D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		851F01A622B7F46800B32D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		851F01A822B7F46800B32D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		851F01B022B7FBFF00B32D2A /* SettingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListTableViewController.swift; sourceTree = "<group>"; };
+		851F01B322B7FC3200B32D2A /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		851F01B622B7FC6300B32D2A /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		851F01B922B7FC7700B32D2A /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,73 @@
 		851F019B22B7F46700B32D2A /* Settings27 */ = {
 			isa = PBXGroup;
 			children = (
+				851F01B822B7FC6900B32D2A /* Model */,
+				851F01AF22B7FA0A00B32D2A /* Views */,
+				851F01BC22B7FC9600B32D2A /* Controllers */,
+				851F01AE22B7F9FA00B32D2A /* Resources */,
+			);
+			path = Settings27;
+			sourceTree = "<group>";
+		};
+		851F01AE22B7F9FA00B32D2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				851F019C22B7F46700B32D2A /* AppDelegate.swift */,
-				851F019E22B7F46700B32D2A /* ViewController.swift */,
-				851F01A022B7F46700B32D2A /* Main.storyboard */,
 				851F01A322B7F46800B32D2A /* Assets.xcassets */,
 				851F01A522B7F46800B32D2A /* LaunchScreen.storyboard */,
 				851F01A822B7F46800B32D2A /* Info.plist */,
 			);
-			path = Settings27;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		851F01AF22B7FA0A00B32D2A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				851F01A022B7F46700B32D2A /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		851F01B222B7FC1000B32D2A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				851F01B022B7FBFF00B32D2A /* SettingListTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		851F01B522B7FC4F00B32D2A /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				851F01B322B7FC3200B32D2A /* SettingTableViewCell.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		851F01B822B7FC6900B32D2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				851F01B622B7FC6300B32D2A /* Setting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		851F01BB22B7FC7C00B32D2A /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				851F01B922B7FC7700B32D2A /* SettingController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		851F01BC22B7FC9600B32D2A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				851F01BB22B7FC7C00B32D2A /* Model Controller */,
+				851F01B522B7FC4F00B32D2A /* Custom Views */,
+				851F01B222B7FC1000B32D2A /* View Controllers */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +200,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				851F019F22B7F46700B32D2A /* ViewController.swift in Sources */,
+				851F01BA22B7FC7700B32D2A /* SettingController.swift in Sources */,
+				851F01B422B7FC3200B32D2A /* SettingTableViewCell.swift in Sources */,
+				851F01B122B7FBFF00B32D2A /* SettingListTableViewController.swift in Sources */,
+				851F01B722B7FC6300B32D2A /* Setting.swift in Sources */,
 				851F019D22B7F46700B32D2A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
-				INFOPLIST_FILE = Settings27/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Settings27/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
-				INFOPLIST_FILE = Settings27/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Settings27/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
